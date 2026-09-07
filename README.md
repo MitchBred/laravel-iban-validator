@@ -1,4 +1,4 @@
-# Laravel IBAN Validator
+![Laravel IBAN Validator](https://banners.beyondco.de/Laravel%20IBAN%20Validator.png?theme=light&packageManager=composer+require&packageName=mitchbred%2Flaravel-iban-validator&pattern=architect&style=style_1&description=IBAN+length+and+checksum+validation+for+Laravel&md=1&showWatermark=0&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
 
 [![Tests](https://github.com/MitchBred/laravel-iban-validator/actions/workflows/tests.yml/badge.svg)](https://github.com/MitchBred/laravel-iban-validator/actions/workflows/tests.yml)
 
@@ -8,12 +8,6 @@ IBAN format, allowed-country policies, and the ISO 13616 mod-97 checksum.
 
 The validator has no runtime dependency beyond the Illuminate components used
 by Laravel.
-
-> [!IMPORTANT]
-> The package mirrors `ngx-iban-validator` v1.2.4. It does not validate each
-> country's domestic BBAN substructure and does not prove that a bank account
-> exists. Its 111 recognized formats also include upstream compatibility
-> entries that are not presented as the official SWIFT IBAN Registry.
 
 ## Requirements
 
