@@ -1,0 +1,73 @@
+{
+    "name": "mitchbred/laravel-iban-validator",
+    "description": "Laravel IBAN length and checksum validation with structured errors and country restrictions.",
+    "homepage": "https://github.com/MitchBred/laravel-iban-validator",
+    "keywords": [
+        "iban",
+        "laravel",
+        "validation",
+        "validator"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "MitchBred",
+            "email": "mail@mitchellbreden.nl"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/MitchBred/laravel-iban-validator/issues",
+        "source": "https://github.com/MitchBred/laravel-iban-validator"
+    },
+    "require": {
+        "php": "^8.5",
+        "illuminate/contracts": "^13.12",
+        "illuminate/support": "^13.12"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.11",
+        "laravel/pint": "^1.30",
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MitchBred\\LaravelIbanValidator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MitchBred\\LaravelIbanValidator\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MitchBred\\LaravelIbanValidator\\LaravelIbanValidatorServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "analyse": "phpstan analyse --memory-limit=1G",
+        "check": [
+            "@validate:composer",
+            "@format:test",
+            "@analyse",
+            "@test"
+        ],
+        "format": "pint",
+        "format:test": "pint --test",
+        "test": "pest --compact",
+        "validate:composer": "composer validate --strict"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "prefer-stable": true
+}
